@@ -1,6 +1,7 @@
-//var five = require("johnny-five");
-//var Raspi = require("raspi-io");
+var five = require("johnny-five");
+var Raspi = require("raspi-io");
 
+/*
 var gpio = require("pi-gpio");
 
 var intervalId;
@@ -30,15 +31,13 @@ durationId = setTimeout(function () {
     });
 }, 10000); // duration in mS
 
-/*
+*/
 
  var board = new five.Board({
  io: new Raspi()
  });
 
  board.on("ready", function() {
- var led = new five.Led("P1-13");
+ var led = new five.Led("P1-11");
  led.blink();
  });
-
- */
