@@ -1,0 +1,10 @@
+{
+  "name": "ledcontrol",
+  "description": "playing around with leds",
+  "version": "1.0.0",
+  "main": "./app/controller.js",
+  "dependencies": {
+    "johnny-five": "latest",
+    "raspi-io": "latest"
+  }
+}
