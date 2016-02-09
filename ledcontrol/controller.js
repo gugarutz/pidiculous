@@ -5,7 +5,7 @@ var gpio = require("pi-gpio");
 
 var intervalId;
 var durationId;
-var gpioPin = 13;    // header pin 16 = GPIO port 23
+var gpioPin = 11;    // header pin 16 = GPIO port 23
 
 // open pin 16 for output
 //
