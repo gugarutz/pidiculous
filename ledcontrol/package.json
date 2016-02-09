@@ -4,8 +4,6 @@
   "version": "1.0.0",
   "main": "./app/controller.js",
   "dependencies": {
-    //"johnny-five": "latest",
-    //"raspi-io": "latest"
     "pi-gpio": "latest"
   }
 }
