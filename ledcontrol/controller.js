@@ -1,6 +1,21 @@
-var five = require("johnny-five");
-var Raspi = require("raspi-io");
+var Gpio = require('onoff').Gpio,
+    led = new Gpio(17, 'out');
 
+var iv = setInterval(function(){
+    led.writeSync(led.readSync() === 0 ? 1 : 0)
+}, 500);
+
+// Stop blinking the LED and turn it off after 5 seconds.
+setTimeout(function() {
+    clearInterval(iv); // Stop blinking
+    led.writeSync(0);  // Turn LED off.
+    led.unexport();    // Unexport GPIO and free resources
+}, 5000);
+
+
+/*var five = require("johnny-five");
+var Raspi = require("raspi-io");
+*/
 /*
 var gpio = require("pi-gpio");
 
@@ -33,6 +48,7 @@ durationId = setTimeout(function () {
 
 */
 
+/*
  var board = new five.Board({
  io: new Raspi()
  });
@@ -41,3 +57,4 @@ durationId = setTimeout(function () {
  var led = new five.Led("P1-11");
  led.blink();
  });
+*/

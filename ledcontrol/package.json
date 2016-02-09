@@ -4,6 +4,6 @@
   "version": "1.0.0",
   "main": "./app/controller.js",
   "dependencies": {
-    "pi-gpio": "latest"
+    "onoff": "latest"
   }
 }
