@@ -8,11 +8,11 @@ PythonShell.run('beep.py', function (err) {
     console.log('finished');
 });*/
 
+var pyshell = new PythonShell('beep.py');
+
 app.get('/', function (req, res) {
     res.send('Hello World!');
 });
-
-//var pyshell = new PythonShell('beep.py');
 
 app.get('/on', function (req, res) {
     pyshell.send('ON');
