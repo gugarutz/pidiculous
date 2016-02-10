@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "main": "./app/controller.js",
   "dependencies": {
-    "python-shell": "latest"
+    "python-shell": "latest",
+    "express": "^4.13.4",
+    "body-parser": "^1.14.2",
+    "socket.io": "^1.4.5",
+    "mocha": "^2.4.5"
   }
 }
