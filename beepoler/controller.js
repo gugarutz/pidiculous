@@ -7,7 +7,12 @@ app.get('/', function (req, res) {
     res.send('Hello World!');
 });
 
-var pyshell = new PythonShell('beep.py');
+//var pyshell = new PythonShell('beep.py');
+
+PythonShell.run('beep.py', function (err) {
+    if (err) throw err;
+    console.log('finished');
+});
 
 app.get('/on', function (req, res) {
     pyshell.send('on');
