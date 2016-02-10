@@ -16,10 +16,12 @@ app.get('/', function (req, res) {
 
 app.get('/on', function (req, res) {
     pyshell.send('ON');
+    console.log("da!");
 });
 
 app.get('/off', function (req, res) {
     pyshell.send('OFF');
+    console.log("da2!");
 });
 
 app.listen(3000, function () {

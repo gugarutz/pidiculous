@@ -4,7 +4,7 @@ import time
 import sys
 
 BeepPin = 11  # pin11
-dummy = 1
+dummy = 0
 
 
 def setup():
