@@ -4,7 +4,7 @@ import time
 import sys
 
 BeepPin = 11    # pin11
-dummy = true
+dummy = 1
 
 def setup():
     GPIO.setmode(GPIO.BOARD)        # Numbers GPIOs by physical location
@@ -13,7 +13,7 @@ def setup():
 
 def loop():
     while true:
-        if dummy == true:
+        if dummy == 1:
             GPIO.output(BeepPin, GPIO.LOW)
             time.sleep(0.1)
             GPIO.output(BeepPin, GPIO.HIGH)
@@ -31,9 +31,9 @@ if __name__ == '__main__':     # Program start from here
     try:
         for line in sys.stdin:
             if line == "ON":
-                dummy = true
+                dummy = 1
             else:
-                dummy = false
+                dummy = 0
         loop()
     except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
         destroy()
