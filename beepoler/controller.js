@@ -35,7 +35,9 @@ router.use(function (req, res, next) {
 })
 
 // initialize root route (0.0.0.0:1337/api)
-router.get('/', routes.index);
+router.get('/', function (req, res) {
+    res.render('index', {});
+});
 
 // initialize message route (0.0.0.0:1337/api/message)
 router.route('/beepon')
