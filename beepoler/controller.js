@@ -5,6 +5,19 @@ PythonShell.run('beep.py', function (err) {
 });
 */
 
+
+var express = require('express');
+var app = express();
+
+app.get('/', function (req, res) {
+    res.send('Hello World!');
+});
+
+app.listen(3000, function () {
+    console.log('Example app listening on port 3000!');
+});
+
+/*
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -35,9 +48,7 @@ router.use(function (req, res, next) {
 })
 
 // initialize root route (0.0.0.0:1337/api)
-router.get('/', function (req, res) {
-    res.render('index', {});
-});
+router.get('/', routes.index);
 
 // initialize message route (0.0.0.0:1337/api/message)
 router.route('/beepon')
@@ -53,3 +64,4 @@ app.use('/api', router);
 server.listen(port);
 
 console.log('texta api started on port ' + port);
+    */
