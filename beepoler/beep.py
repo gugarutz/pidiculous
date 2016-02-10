@@ -15,13 +15,13 @@ def setup():
 
 def loop():
     while True:
-        # if dummy == 1:
-        GPIO.output(BeepPin, GPIO.LOW)
-        time.sleep(0.1)
-        GPIO.output(BeepPin, GPIO.HIGH)
-        time.sleep(0.1)
-        # else:
-        time.sleep(0.4)
+        if dummy == 1:
+            GPIO.output(BeepPin, GPIO.LOW)
+            time.sleep(0.1)
+            GPIO.output(BeepPin, GPIO.HIGH)
+            time.sleep(0.1)
+        else:
+            time.sleep(0.4)
 
 
 def destroy():
