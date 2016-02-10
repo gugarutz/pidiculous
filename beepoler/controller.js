@@ -1,3 +1,12 @@
+
+var PythonShell = require('python-shell');
+
+PythonShell.run('beep.py', function (err) {
+    if (err) throw err;
+    console.log('finished');
+});
+
+/*
 var PythonShell = require('python-shell');
 var express = require('express');
 var app = express();
@@ -46,3 +55,4 @@ app.use('/api', router);
 server.listen(port);
 
 console.log('texta api started on port ' + port);
+    */
