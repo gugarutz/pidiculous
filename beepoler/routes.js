@@ -9,8 +9,11 @@ module.exports = function (io) {
         },
 
         on: function (req, res) {
+
+            console.log("asdf");
+
             //var PythonShell = require('python-shell');
-            var pyshell = new PythonShell('my_script.py');
+            /*var pyshell = new PythonShell('my_script.py');
 
             // sends a message to the Python script via stdin
             pyshell.send('hello');
@@ -24,7 +27,7 @@ module.exports = function (io) {
             pyshell.end(function (err) {
                 if (err) throw err;
                 console.log('finished');
-            });
+            });*/
         },
 
         off: function (req, res) {
