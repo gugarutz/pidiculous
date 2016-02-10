@@ -1,13 +1,13 @@
 
 var PythonShell = require('python-shell');
-//var express = require('express');
-//var app = express();
-
+var express = require('express');
+var app = express();
+/*
 PythonShell.run('beep.py', function (err) {
     if (err) throw err;
     console.log('finished');
-});
-/*
+});*/
+
 app.get('/', function (req, res) {
     res.send('Hello World!');
 });
@@ -30,7 +30,7 @@ PythonShell.run('beep.py', function (err) {
     if (err) throw err;
     console.log('finished');
 });
-*/
+
 
 /*
 var express = require('express');

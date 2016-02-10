@@ -32,7 +32,7 @@ if __name__ == '__main__':     # Program start from here
         for line in sys.stdin:
             if line == "ON":
                 dummy = true
-            else
+            else:
                 dummy = false
         loop()
     except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
