@@ -5,7 +5,7 @@ module.exports = function (io) {
     return {
         // GET: /api
         index: function (req, res) {
-            res.json({message: 'go to /api/message.'});
+            res.render('index', {});
         },
 
         on: function (req, res) {
