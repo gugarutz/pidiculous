@@ -15,11 +15,11 @@ app.get('/', function (req, res) {
 //var pyshell = new PythonShell('beep.py');
 
 app.get('/on', function (req, res) {
-    pyshell.send('on');
+    pyshell.send('ON');
 });
 
 app.get('/off', function (req, res) {
-    pyshell.send('off');
+    pyshell.send('OFF');
 });
 
 app.listen(3000, function () {
