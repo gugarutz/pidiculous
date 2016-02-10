@@ -12,7 +12,7 @@ def setup():
     GPIO.output(BeepPin, GPIO.HIGH) # Set BeepPin high(+3.3V) to off beep
 
 def loop():
-    while true:
+    while True:
         if dummy == 1:
             GPIO.output(BeepPin, GPIO.LOW)
             time.sleep(0.1)
