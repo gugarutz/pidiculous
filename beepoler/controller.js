@@ -11,7 +11,6 @@ var bodyParser = require('body-parser');
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var routes = require('./routes')(io);
-var socketEvents = require('./socketevents');
 var PythonShell = require('python-shell');
 
 // initialize body-parser
