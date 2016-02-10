@@ -1,0 +1,9 @@
+{
+  "name": "ledcontrol",
+  "description": "playing around with leds",
+  "version": "1.0.0",
+  "main": "./app/controller.js",
+  "dependencies": {
+    "python-shell": "latest"
+  }
+}
