@@ -15,8 +15,8 @@ var PythonShell = require('python-shell');
 
 // initialize body-parser
 // bodyparser parses the body from a HTTP POST to a JSON object
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded({extended: true}));
+//app.use(bodyParser.json());
 
 var port = process.env.PORT || 1337;
 
