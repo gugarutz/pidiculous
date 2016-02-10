@@ -14,12 +14,12 @@ app.get('/', function (req, res) {
     res.send('Hello World!');
 });
 
-app.get('/on', function (req, res) {
+app.post('/on', function (req, res) {
     pyshell.send('ON');
     console.log("da!");
 });
 
-app.get('/off', function (req, res) {
+app.post('/off', function (req, res) {
     pyshell.send('OFF');
     console.log("da2!");
 });
