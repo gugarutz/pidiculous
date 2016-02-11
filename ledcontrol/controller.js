@@ -1,4 +1,4 @@
-//var PythonShell = require('python-shell');
+var PythonShell = require('python-shell');
 var express = require('express');
 var app = express();
 /*
@@ -7,10 +7,10 @@ var app = express();
  console.log('finished');
  });*/
 
-//var pyshell = new PythonShell('beep.py');
+var pyshell = new PythonShell('ledcontrol.py');
 
-var spawn = require('child_process').spawn;
-var py = spawn('python', ['ledcontrol.py']);
+//var spawn = require('child_process').spawn;
+//var py = spawn('python', ['ledcontrol.py']);
 
 /*
  py.stdout.on('data', function(data){
@@ -26,19 +26,19 @@ app.get('/', function (req, res) {
 });
 
 app.get('/on', function (req, res) {
-    //pyshell.send('ON');
+    pyshell.send('ON');
 
-    py.stdin.write('ON\n');
-    py.stdin.end();
+    //py.stdin.write('ON\n');
+    //py.stdin.end();
 
     console.log("da!");
 });
 
 app.get('/off', function (req, res) {
-    //pyshell.send('OFF');
+    pyshell.send('OFF');
 
-    py.stdin.write('OFF\n');
-    py.stdin.end();
+    //py.stdin.write('OFF\n');
+    //py.stdin.end();
 
     console.log("da2!");
 });
