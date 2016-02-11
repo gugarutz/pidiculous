@@ -47,11 +47,6 @@ app.listen(3000, function () {
     console.log('Example app listening on port 3000!');
 });
 
-PythonShell.run('beep.py', function (err) {
-    if (err) throw err;
-    console.log('finished');
-});
-
 
 /*
  var express = require('express');
