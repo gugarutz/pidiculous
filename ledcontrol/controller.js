@@ -28,7 +28,8 @@ app.get('/', function (req, res) {
 app.get('/on', function (req, res) {
     //pyshell.send('ON');
 
-    py.stdin.writeln('ON');
+    py.stdin.write('ON\n');
+    py.stdin.flush();
 
     console.log("da!");
 });
@@ -36,7 +37,8 @@ app.get('/on', function (req, res) {
 app.get('/off', function (req, res) {
     //pyshell.send('OFF');
 
-    py.stdin.writeln('OFF');
+    py.stdin.write('OFF\n');
+    py.stdin.flush();
 
     console.log("da2!");
 });
