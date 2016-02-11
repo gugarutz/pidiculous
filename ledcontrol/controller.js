@@ -7,7 +7,7 @@ var app = express();
  console.log('finished');
  });*/
 
-var pyshell = new PythonShell('ledcontrol.py');
+//var pyshell = new PythonShell('ledcontrol.py');
 
 //var spawn = require('child_process').spawn;
 //var py = spawn('python', ['ledcontrol.py']);
@@ -26,7 +26,13 @@ app.get('/', function (req, res) {
 });
 
 app.get('/on', function (req, res) {
-    pyshell.send('ON');
+
+    PythonShell.run('ledON.py', function (err) {
+        if (err) throw err;
+        console.log('finished');
+    });
+
+    //pyshell.send('ON');
 
     //py.stdin.write('ON\n');
     //py.stdin.end();
@@ -35,7 +41,13 @@ app.get('/on', function (req, res) {
 });
 
 app.get('/off', function (req, res) {
-    pyshell.send('OFF');
+
+    PythonShell.run('ledOFF.py', function (err) {
+        if (err) throw err;
+        console.log('finished');
+    });
+
+    //pyshell.send('OFF');
 
     //py.stdin.write('OFF\n');
     //py.stdin.end();
