@@ -41,7 +41,7 @@ app.get('/off', function (req, res) {
     console.log("da2!");
 });
 
-py.stdin.end();
+//py.stdin.end();
 
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!');
