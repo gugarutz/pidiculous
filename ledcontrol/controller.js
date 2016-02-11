@@ -29,7 +29,6 @@ app.get('/on', function (req, res) {
     //pyshell.send('ON');
 
     py.stdin.write('ON');
-    py.stdin.end();
 
     console.log("da!");
 });
@@ -38,10 +37,11 @@ app.get('/off', function (req, res) {
     //pyshell.send('OFF');
 
     py.stdin.write('OFF');
-    py.stdin.end();
 
     console.log("da2!");
 });
+
+py.stdin.end();
 
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!');
