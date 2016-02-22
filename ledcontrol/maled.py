@@ -22,13 +22,14 @@ def getrandcolorvalue(brightness, a, b):
 
 
 def getrandomcolor(red, green, blue, a, b):
-    return (getrandcolorvalue(red, a, b), getrandcolorvalue(green, a, b), getrandcolorvalue(blue, a, b))
+    return [getrandcolorvalue(red, a, b), getrandcolorvalue(green, a, b), getrandcolorvalue(blue, a, b)]
 
 
 def meteor(strip, r, g, b, wait_ms=50):
     for i in range(strip.numPixels()):
-        strip.setPixelColor(i, getrandomcolor(r, g, b, 0.9, 1))
-        strip.setPixelColor(i+1, getrandomcolor(r, g, b, 1, 1))
+        strip.setPixelColor(i, getrandomcolor(r, g, b, 0.9, 1)[0], getrandomcolor(r, g, b, 0.9, 1)[1], getrandomcolor(r, g, b, 0.9, 1)[2])
+        strip.setPixelColor(i+1, getrandomcolor(r, g, b, 1, 1)[0], getrandomcolor(r, g, b, 1, 1)[1], getrandomcolor(r, g, b, 1, 1)[2])
+        """
         strip.setPixelColor(i+2, getrandomcolor(r, g, b, 0.95, 1))
         strip.setPixelColor(i+3, getrandomcolor(r, g, b, 0.9, 0.95))
         strip.setPixelColor(i+3, getrandomcolor(r, g, b, 0.9, 0.95))
@@ -43,19 +44,20 @@ def meteor(strip, r, g, b, wait_ms=50):
         strip.setPixelColor(i+13, getrandomcolor(r, g, b, 0.1, 0.3))
         strip.setPixelColor(i+14, getrandomcolor(r, g, b, 0, 0.2))
         strip.setPixelColor(i+15, getrandomcolor(r, g, b, 0, 0.2))
+        """
         strip.show()
         time.sleep(wait_ms / 1000.0)
 
 
 def lasssprudeln(strip, r, g, b, wait_ms=50):
     for i in range(strip.numPixels()):
-        strip.setPixelColor(i, (r, g, b))
-        strip.setPixelColor(i+1, (r*0.8, g*0.8, b*0.8))
-        strip.setPixelColor(i+2, (r*0.7, g*0.7, b*0.7))
-        strip.setPixelColor(i+3, (r*0.6, g*0.6, b*0.6))
-        strip.setPixelColor(i+4, (r*0.4, g*0.4, b*0.4))
-        strip.setPixelColor(i+4, (r*0.2, g*0.2, b*0.4))
-        strip.setPixelColor(i+4, (r*0, g*0, b*0))
+        strip.setPixelColor(i, r, g, b)
+        strip.setPixelColor(i+1, r*0.8, g*0.8, b*0.8)
+        strip.setPixelColor(i+2, r*0.7, g*0.7, b*0.7)
+        strip.setPixelColor(i+3, r*0.6, g*0.6, b*0.6)
+        strip.setPixelColor(i+4, r*0.4, g*0.4, b*0.4)
+        strip.setPixelColor(i+4, r*0.2, g*0.2, b*0.4)
+        strip.setPixelColor(i+4, r*0, g*0, b*0)
         strip.show()
         time.sleep(wait_ms / 1000.0)
 
