@@ -22,7 +22,7 @@ def getrandcolorvalue(brightness, a, b):
 
 
 def getrandomcolor(red, green, blue, a, b):
-    return strip.Color(getrandcolorvalue(red, a, b), getrandcolorvalue(green, a, b), getrandcolorvalue(blue, a, b))
+    return (getrandcolorvalue(red, a, b), getrandcolorvalue(green, a, b), getrandcolorvalue(blue, a, b))
 
 
 def meteor(strip, r, g, b, wait_ms=50):
