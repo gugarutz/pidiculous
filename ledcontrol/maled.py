@@ -140,4 +140,5 @@ if __name__ == '__main__':
     print 'Press Ctrl-C to quit.'
     while True:
         #lasssprudeln(strip, 255, 255, 255)
-        test(strip)
+        #test(strip)
+		theaterChase(strip, Color(127,   0,   0))  # Red theater chase
