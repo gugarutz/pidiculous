@@ -28,6 +28,7 @@ def getrandomcolor(red, green, blue, a, b):
 def test(strip):
     for i in range(strip.numPixels()):
         strip.setPixelColor(i, Color(100, 0, 50))
+        strip.setPixelColor(i+10, Color(100, 20, 30))
         strip.show()
         time.sleep(50 / 1000.0)
 
