@@ -22,13 +22,13 @@ def getrandcolorvalue(brightness, a, b):
 
 
 def getrandomcolor(red, green, blue, a, b):
-    return [getrandcolorvalue(red, a, b), getrandcolorvalue(green, a, b), getrandcolorvalue(blue, a, b)]
+    return (getrandcolorvalue(red, a, b), getrandcolorvalue(green, a, b), getrandcolorvalue(blue, a, b))
 
 
 def meteor(strip, r, g, b, wait_ms=50):
     for i in range(strip.numPixels()):
-        strip.setPixelColor(i, getrandomcolor(r, g, b, 0.9, 1)[0], getrandomcolor(r, g, b, 0.9, 1)[1], getrandomcolor(r, g, b, 0.9, 1)[2])
-        strip.setPixelColor(i+1, getrandomcolor(r, g, b, 1, 1)[0], getrandomcolor(r, g, b, 1, 1)[1], getrandomcolor(r, g, b, 1, 1)[2])
+        strip.setPixelColor(i, getrandomcolor(r, g, b, 0.9, 1))
+        strip.setPixelColor(i+1, getrandomcolor(r, g, b, 1, 1))
         """
         strip.setPixelColor(i+2, getrandomcolor(r, g, b, 0.95, 1))
         strip.setPixelColor(i+3, getrandomcolor(r, g, b, 0.9, 0.95))
