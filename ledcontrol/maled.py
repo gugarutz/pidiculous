@@ -18,7 +18,7 @@ LED_INVERT = False  # True to invert the signal (when using NPN transistor level
 FULL_COLOR = 255 # maximum brightness of one rgb color part
 
 def getrandcolorvalue(brightness, a, b):
-    return brightness * (random.randint(a, b) * 100) / 100
+    return brightness * random.randint(a, b)/100
 
 
 def getrandomcolor(red, green, blue, a, b):
@@ -27,22 +27,22 @@ def getrandomcolor(red, green, blue, a, b):
 
 def meteor(strip, r, g, b, wait_ms=50):
     for i in range(strip.numPixels()):
-        strip.setPixelColor(i, getrandomcolor(r, g, b, 0.9, 1))
-        strip.setPixelColor(i+1, getrandomcolor(r, g, b, 1, 1))
-        strip.setPixelColor(i+2, getrandomcolor(r, g, b, 0.95, 1))
-        strip.setPixelColor(i+3, getrandomcolor(r, g, b, 0.9, 0.95))
-        strip.setPixelColor(i+3, getrandomcolor(r, g, b, 0.9, 0.95))
-        strip.setPixelColor(i+3, getrandomcolor(r, g, b, 0.8, 0.95))
-        strip.setPixelColor(i+6, getrandomcolor(r, g, b, 0.7, 0.9))
-        strip.setPixelColor(i+7, getrandomcolor(r, g, b, 0.6, 0.85))
-        strip.setPixelColor(i+8, getrandomcolor(r, g, b, 0.6, 0.7))
-        strip.setPixelColor(i+9, getrandomcolor(r, g, b, 0.5, 0.7))
-        strip.setPixelColor(i+10, getrandomcolor(r, g, b, 0.4, 0.6))
-        strip.setPixelColor(i+11, getrandomcolor(r, g, b, 0.3, 0.5))
-        strip.setPixelColor(i+12, getrandomcolor(r, g, b, 0.2, 0.4))
-        strip.setPixelColor(i+13, getrandomcolor(r, g, b, 0.1, 0.3))
-        strip.setPixelColor(i+14, getrandomcolor(r, g, b, 0, 0.2))
-        strip.setPixelColor(i+15, getrandomcolor(r, g, b, 0, 0.2))
+        strip.setPixelColor(i, getrandomcolor(r, g, b, 90, 100))
+        strip.setPixelColor(i+1, getrandomcolor(r, g, b, 100, 100))
+        strip.setPixelColor(i+2, getrandomcolor(r, g, b, 95, 100))
+        strip.setPixelColor(i+3, getrandomcolor(r, g, b, 90, 95))
+        strip.setPixelColor(i+3, getrandomcolor(r, g, b, 90, 95))
+        strip.setPixelColor(i+3, getrandomcolor(r, g, b, 80, 95))
+        strip.setPixelColor(i+6, getrandomcolor(r, g, b, 70, 90))
+        strip.setPixelColor(i+7, getrandomcolor(r, g, b, 60, 85))
+        strip.setPixelColor(i+8, getrandomcolor(r, g, b, 60, 70))
+        strip.setPixelColor(i+9, getrandomcolor(r, g, b, 50, 70))
+        strip.setPixelColor(i+10, getrandomcolor(r, g, b, 40, 60))
+        strip.setPixelColor(i+11, getrandomcolor(r, g, b, 30, 50))
+        strip.setPixelColor(i+12, getrandomcolor(r, g, b, 20, 40))
+        strip.setPixelColor(i+13, getrandomcolor(r, g, b, 10, 30))
+        strip.setPixelColor(i+14, getrandomcolor(r, g, b, 0, 20))
+        strip.setPixelColor(i+15, getrandomcolor(r, g, b, 0, 20))
         strip.show()
         time.sleep(wait_ms / 1000.0)
 
