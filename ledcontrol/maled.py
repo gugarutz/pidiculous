@@ -132,4 +132,5 @@ if __name__ == '__main__':
 
     print 'Press Ctrl-C to quit.'
     while True:
-        lasssprudeln(strip, 255, 255, 255)
+        #lasssprudeln(strip, 255, 255, 255)
+        meteor(strip, 255, 0, 0);
