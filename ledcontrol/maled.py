@@ -32,6 +32,7 @@ def test(strip):
         strip.show()
         time.sleep(50 / 1000.0)
 
+
 def meteor(strip, r, g, b, wait_ms=50):
     for i in range(strip.numPixels()):
         strip.setPixelColor(i, getrandomcolor(r, g, b, 90, 100))
@@ -126,8 +127,8 @@ def theaterChaseRainbow(strip, wait_ms=50):
                 strip.setPixelColor(i + q, wheel((i + j) % 255))
             strip.show()
             time.sleep(wait_ms / 1000.0)
-            for i in range(0, strip.numPixels(), 3):
-                strip.setPixelColor(i + q, 0)
+            #for i in range(0, strip.numPixels(), 3):
+            #    strip.setPixelColor(i + q, 0)
 
 
 # Main program logic follows:
