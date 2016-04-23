@@ -142,5 +142,5 @@ if __name__ == '__main__':
     while True:
         #lasssprudeln(strip, 255, 255, 255)
         #test(strip)
-		theaterChase(strip, Color(20,   0,   0), 200)  # Red theater chase
+		theaterChase(strip, Color(255,   0,   0), 200)  # Red theater chase
         #test(strip)
