@@ -13,12 +13,12 @@ LED_INVERT = False  # True to invert the signal (when using NPN transistor level
 FULL_COLOR = 255 # maximum brightness of one rgb color part
 
 
-def testlearna():
+def testlearna(delta=15):
     iterations = 10
     color = Color(255, 100, 255)
     wait_ms = 50
 #, random.randint(1, 10)
-    for i in range(0, strip.numPixels(), 15):
+    for i in range(0, strip.numPixels(), delta):
         strip.setPixelColor(i, color)
 
     strip.show()
@@ -46,5 +46,7 @@ if __name__ == '__main__':
 
     print 'Press Ctrl-C to quit.'
     while True:
-        testlearna()
+        testlearna(2)
+        testlearna(4)
+        testlearna(8)
         #theaterChase(strip, Color(235,   91,   14), 200)
