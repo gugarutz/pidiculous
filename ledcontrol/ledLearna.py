@@ -14,7 +14,18 @@ FULL_COLOR = 255 # maximum brightness of one rgb color part
 
 
 def testlearna():
-    strip.setPixelColor(1, Color(255,255,255))
+    iterations = 10
+    color = Color(255, 255, 255)
+    wait_ms = 50
+
+    for j in range(iterations):
+        for q in range(3):
+            for i in range(0, strip.numPixels(), 3):
+                strip.setPixelColor(i + q, color)
+            strip.show()
+            time.sleep(wait_ms / 1000.0)
+            for i in range(0, strip.numPixels(), 3):
+                strip.setPixelColor(i + q, 0)
 
 
 def theaterChase(strip, color, wait_ms=50, iterations=10):
