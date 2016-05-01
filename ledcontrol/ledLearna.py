@@ -20,7 +20,7 @@ def testlearna(delta=15):
 #, random.randint(1, 10)
 
     while True:
-        for i in range(0, strip.numPixels(), delta):
+        for i in range(0, strip.numPixels(), random.randint(1, 10)):
             strip.setPixelColor(i, color)
 
         strip.show()
