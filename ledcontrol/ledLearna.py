@@ -16,7 +16,7 @@ FULL_COLOR = 255 # maximum brightness of one rgb color part
 def testlearna():
     iterations = 10
     color = Color(255, 255, 255)
-    wait_ms = 5000
+    wait_ms = 5
 
     for j in range(iterations):
         for q in range(3):
