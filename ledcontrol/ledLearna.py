@@ -18,7 +18,7 @@ def testlearna():
     color = Color(255, 100, 255)
     wait_ms = 50
 
-    for i in range(0, strip.numPixels(), random.random()*10):
+    for i in range(0, strip.numPixels(), random.randint(1, 10)):
         strip.setPixelColor(i, color)
 
     strip.show()
