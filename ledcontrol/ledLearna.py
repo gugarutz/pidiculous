@@ -46,7 +46,5 @@ if __name__ == '__main__':
 
     print 'Press Ctrl-C to quit.'
     while True:
-        testlearna(8)
-        testlearna(2)
-        testlearna(4)
+        testlearna()
         #theaterChase(strip, Color(235,   91,   14), 200)
