@@ -18,11 +18,13 @@ def testlearna(delta=15):
     color = Color(255, 100, 255)
     wait_ms = 50
 #, random.randint(1, 10)
-    for i in range(0, strip.numPixels(), delta):
-        strip.setPixelColor(i, color)
 
-    strip.show()
-    time.sleep(wait_ms / 1000.0)
+    while True:
+        for i in range(0, strip.numPixels(), delta):
+            strip.setPixelColor(i, color)
+
+        strip.show()
+        time.sleep(wait_ms / 1000.0)
 
 
 def theaterChase(strip, color, wait_ms=50, iterations=10):
