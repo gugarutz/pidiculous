@@ -16,12 +16,12 @@ FULL_COLOR = 255 # maximum brightness of one rgb color part
 def testlearna(delta=15):
     iterations = 10
     color = Color(255, 100, 255)
-    wait_ms = 50
+    wait_ms = 100
 #, random.randint(1, 10)
 
     while True:
-        for i in range(0, strip.numPixels(), random.randint(1, 10)):
-            strip.setPixelColor(i, color)
+        for i in range(0, strip.numPixels(), 5):
+            strip.setPixelColor(i, Color(255, random.randint(1, 255), 255))
 
         strip.show()
         time.sleep(wait_ms / 1000.0)
