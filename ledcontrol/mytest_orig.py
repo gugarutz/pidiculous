@@ -95,4 +95,4 @@ if __name__ == '__main__':
 		# Rainbow animations.
 		rainbow(strip)
 		rainbowCycle(strip)
-		theaterChaseRainbow(strip, 470)
+		theaterChaseRainbow(strip, 650)
