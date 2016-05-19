@@ -20,11 +20,16 @@ def testlearna(delta=15):
 #, random.randint(1, 10)
 
     while True:
-        for i in range(0, strip.numPixels(), 5):
-            strip.setPixelColor(i, Color(255, random.randint(1, 255), 255))
+        #for i in range(0, strip.numPixels(), 5):
+        #    strip.setPixelColor(i, Color(255, random.randint(1, 255), 255))
 
-        strip.show()
-        time.sleep(wait_ms / 1000.0)
+        #strip.show()
+        #time.sleep(wait_ms / 1000.0)
+
+        for i in range(strip.numPixels()):
+            strip.setPixelColor(i, color)
+            strip.show()
+            time.sleep(wait_ms / 1000.0)
 
 
 
